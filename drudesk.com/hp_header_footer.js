@@ -20,12 +20,20 @@
  4.3) Social buttons
 
  */
+var VRBL = require('variables.js');
 
-var siteTest = 'https://drudesk.com/';
+
+//var MyUrl = new variables ();
+
+//echo(MyUrl);
+
+var siteTest = VRBL.currentsite;
+
 casper.options.viewportSize = {width: 1024, height: 768};
 
 casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
     casper.start();
+    //console.log(VRBL.currentsite);
 
         casper.thenOpen (siteTest, function() {
         //Load homepage
@@ -42,20 +50,23 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         //CHECK MENU LINKS
         //"How it works", "Pricing", "About", "Blog"
-        var menuLinkSelector = 'li.first.leaf.active';  //How it works
-        var menuLinkName = 'How it works';
+        var menuLinkSelector = VRBL.selHowItWorks;  //How it works
+        var menuLinkName = VRBL.nameHowItWorks;
+
         test.comment('Checking menu links '+menuLinkName);
         test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
         test.assertSelectorHasText(menuLinkSelector, menuLinkName);
 
         menuLinkSelector = 'li.leaf.active';  //Pricing
         menuLinkName = 'Pricing';
+
         test.comment('Checking menu links '+menuLinkName);
         test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
         test.assertSelectorHasText(menuLinkSelector, menuLinkName);
 
         menuLinkSelector = 'li.leaf';  //About
         menuLinkName = 'About';
+        
         test.comment('Checking menu links '+menuLinkName);
         test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
         test.assertSelectorHasText(menuLinkSelector, menuLinkName);
@@ -67,6 +78,7 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
             });
 
         });
+    
     casper.run(function() {
         test.done();
     });
