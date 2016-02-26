@@ -84,7 +84,13 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         test.comment('Testing EXISTING social buttons and its links');
         test.assertExists(VRBL.selFacebookHeader, 'FACEBOOK button exists');
-        test.assertSelectorHasText(VRBL.selSocialHeader, VRBL.textFacebookLink);
+
+            var link = casper.getElementAttribute(VRBL.selFacebookHeader, 'href');
+            if (link == VRBL.textFacebookLink){
+                test.pass(VRBL.textFacebookLink+' - correct link on site');
+            } else
+                test.fail(link+' is incorrect link on site');
+
 
         });
 

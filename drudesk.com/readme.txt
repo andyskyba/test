@@ -1,3 +1,1 @@
-casperjs
---ssl-protocol=any
-test
+casperjs --ssl-protocol=any test YOUR_SCRIPT.js --engine=slimerjs

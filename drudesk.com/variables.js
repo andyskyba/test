@@ -17,7 +17,7 @@ module.exports = {
 
 	//blog:
 	nameBlog: 'Blog', // name menu link "Blog"
-	selBlog: 'li.last.leaf', // selector menu link "Blog"
+	selBlog: 'header a[href="/blog"]', // selector menu link "Blog"
 
 	//Contacts VRBLs
 	selPhoneHeader: 'div.region.region-top-contacts', //Phone selector in header
@@ -30,7 +30,8 @@ module.exports = {
 
 	//Social buttons: FACEBOOK, GOOGLE+, TWITTER, LINKEDIN
 	selSocialHeader: 'div.top-social.col', //General selector social buttons header
-	selFacebookHeader: 'header .top-social .facebook', //Facebook selector in header
+
+	selFacebookHeader: 'header .top-social .facebook a', //Facebook selector in header
 	selFacebookHeader2: 'header .top-social .google a',
 	textFacebookLink: 'https://www.facebook.com/drudesk', //Facebook account link
 
