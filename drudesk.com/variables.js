@@ -32,7 +32,15 @@ module.exports = {
 	selSocialHeader: 'div.top-social.col', //General selector social buttons header
 
 	selFacebookHeader: 'header .top-social .facebook a', //Facebook selector in header
-	selFacebookHeader2: 'header .top-social .google a',
 	textFacebookLink: 'https://www.facebook.com/drudesk', //Facebook account link
+
+	selGooglePlusHeader: 'header .top-social .google a', //GooglePlus selector in header
+	textGooglePlusLink: 'https://plus.google.com/+Drudesk-Drupal-Support', //Facebook account link
+
+	selTwitterHeader: 'header .top-social .twitter a', //TWITTER selector in header
+	textTwitterLink: 'https://twitter.com/drudesk', //TWITTER account link
+
+	selLinkedInHeader: 'header .top-social .linkedin a', //LINKEDIN selector in header
+	textLinkedInLink: 'https://www.linkedin.com/company/drudesk', //LINKEDIN account link
 
 }
