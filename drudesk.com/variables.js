@@ -2,6 +2,17 @@
 module.exports = {
 	currentsite: 'http://drudesk.com/',
 	namesite: 'DruDesk',
+
+	//Browser window size
+	widthDesktop: 1024,
+	heightDesktop: 768,
+
+	widthMobile: 360, //Samsung Galaxy S3
+	heightMobile: 640,
+
+	widthTablet: 768, //Apple iPad
+	heightTablet: 1024,
+
 //Elements ON SITE HOME PAGE
 	//homepage:
 	nameHowItWorks: 'How it works', // name menu link "How it works"
