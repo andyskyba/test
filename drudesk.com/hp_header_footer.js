@@ -130,8 +130,8 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
         test.comment('TESTING ELEMENTS at FOOTER');
 
         test.comment('Verifying CONTACTS on page at footer');
-        test.assertSelectorHasText(VRBL.selPhoneFooter, VRBL.textContactPhone); // Verifying contact phone header
-        test.assertSelectorHasText(VRBL.selEmailFooter, VRBL.textContactEmail); // Verifying contact email header
+        test.assertSelectorHasText(VRBL.selPhoneFooter, VRBL.textContactPhone); // Verifying contact phone footer
+        test.assertSelectorHasText(VRBL.selEmailFooter, VRBL.textContactEmail); // Verifying contact email footer
 
 
         test.comment('TESTING MENU at FOOTER');
