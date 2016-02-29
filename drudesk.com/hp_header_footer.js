@@ -13,15 +13,20 @@
  3.3) Contact info +
  3.4) Social buttons +
  4) Verifying information at footer
- 4.1) Menu links
+ 4.1) Menu links +
  4.2) Contact info +
- 4.3) Social buttons
+ 4.3) Social buttons +
  */
+
 var VRBL = require('variables.js');
 var siteTest = VRBL.currentsite;
 var widthWindow = VRBL.widthDesktop;
 var heightWindow = VRBL.heightDesktop;
 
+//Current variables
+var menuLinkSelector = 'string';
+var menuLinkName = 'string';
+var link = 'address';
 
 //Making ScreenShots with unik number
 var screenshotCounter = 0;
@@ -55,8 +60,8 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         test.comment('TESTING MENU at HEADER');
 
-        var menuLinkSelector = VRBL.selHowItWorks;  //How it works
-        var menuLinkName = VRBL.nameHowItWorks;
+        menuLinkSelector = VRBL.selHowItWorks;  //How it works
+        menuLinkName = VRBL.nameHowItWorks;
 
         test.comment('Verifying '+menuLinkName);
         test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
@@ -91,7 +96,7 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         test.assertExists(VRBL.selFacebookHeader, 'FACEBOOK button exists');
 
-        var link = casper.getElementAttribute(VRBL.selFacebookHeader, 'href');
+        link = casper.getElementAttribute(VRBL.selFacebookHeader, 'href');
         if (link == VRBL.textFacebookLink){
             test.pass(VRBL.textFacebookLink+' - correct link on site');
         } else
@@ -99,15 +104,7 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         test.assertExists(VRBL.selGooglePlusHeader, 'GOOGLE Plus button exists');
 
-        var link = casper.getElementAttribute(VRBL.selGooglePlusHeader, 'href');
-        if (link == VRBL.textGooglePlusLink){
-            test.pass(VRBL.textGooglePlusLink + ' - correct link on site');
-        } else
-            test.fail(link+' is incorrect link on site');
-
-        test.assertExists(VRBL.selGooglePlusHeader, 'GOOGLE Plus button exists');
-
-        var link = casper.getElementAttribute(VRBL.selGooglePlusHeader, 'href');
+        link = casper.getElementAttribute(VRBL.selGooglePlusHeader, 'href');
         if (link == VRBL.textGooglePlusLink){
             test.pass(VRBL.textGooglePlusLink + ' - correct link on site');
         } else
@@ -115,7 +112,7 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         test.assertExists(VRBL.selTwitterHeader, 'TWITTER Plus button exists');
 
-        var link = casper.getElementAttribute(VRBL.selTwitterHeader, 'href');
+        link = casper.getElementAttribute(VRBL.selTwitterHeader, 'href');
         if (link == VRBL.textTwitterLink){
             test.pass(VRBL.textTwitterLink + ' - correct link on site');
         } else
@@ -123,7 +120,7 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         test.assertExists(VRBL.selTwitterHeader, 'TWITTER Plus button exists');
 
-        var link = casper.getElementAttribute(VRBL.selLinkedInHeader, 'href');
+        link = casper.getElementAttribute(VRBL.selLinkedInHeader, 'href');
         if (link == VRBL.textLinkedInLink){
             test.pass(VRBL.textLinkedInLink + ' - correct link on site');
         } else
@@ -137,16 +134,76 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
         test.assertSelectorHasText(VRBL.selEmailFooter, VRBL.textContactEmail); // Verifying contact email header
 
 
+        test.comment('TESTING MENU at FOOTER');
 
+        menuLinkSelector = VRBL.selHowItWorksFooter;  //How it works
+        menuLinkName = VRBL.nameHowItWorksFooter;
 
+        test.comment('Verifying '+menuLinkName);
+        test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
+        test.assertSelectorHasText(menuLinkSelector, menuLinkName);
 
+        menuLinkSelector = VRBL.selPricingFooter;  //Pricing
+        menuLinkName = VRBL.namePricingFooter;
 
+        test.comment('Verifying '+menuLinkName);
+        test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
+        test.assertSelectorHasText(menuLinkSelector, menuLinkName);
+
+        menuLinkSelector = VRBL.selAboutFooter;  //About
+        menuLinkName = VRBL.nameAboutFooter;
+
+        test.comment('Verifying '+menuLinkName);
+        test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
+        test.assertSelectorHasText(menuLinkSelector, menuLinkName);
+
+        menuLinkSelector = VRBL.selBlogFooter;  //Blog
+        menuLinkName = VRBL.nameBlogFooter;
+
+        test.comment('Verifying '+menuLinkName);
+        test.assertExists( menuLinkSelector, menuLinkName+' link is present.');
+        test.assertSelectorHasText(menuLinkSelector, menuLinkName);
+
+        test.comment('Testing EXISTING social buttons and its links at FOOTER');
+        test.assertExists(VRBL.selFacebookFooter, 'FACEBOOK button exists');
+
+        link = casper.getElementAttribute(VRBL.selFacebookFooter, 'href');
+        if (link == VRBL.textFacebookLink){
+            test.pass(VRBL.textFacebookLink+' - correct link on site');
+        } else
+            test.fail(link+' is incorrect link on site');
+
+        test.assertExists(VRBL.selGooglePlusFooter, 'GOOGLE Plus button exists');
+
+        link = casper.getElementAttribute(VRBL.selGooglePlusFooter, 'href');
+        if (link == VRBL.textGooglePlusLink){
+            test.pass(VRBL.textGooglePlusLink + ' - correct link on site');
+        } else
+            test.fail(link+' is incorrect link on site');
+
+        test.assertExists(VRBL.selTwitterFooter, 'TWITTER Plus button exists');
+
+        link = casper.getElementAttribute(VRBL.selTwitterFooter, 'href');
+        if (link == VRBL.textTwitterLink){
+            test.pass(VRBL.textTwitterLink + ' - correct link on site');
+        } else
+            test.fail(link+' is incorrect link on site');
+
+        test.assertExists(VRBL.selTwitterFooter, 'TWITTER Plus button exists');
+
+        link = casper.getElementAttribute(VRBL.selLinkedInFooter, 'href');
+        if (link == VRBL.textLinkedInLink){
+            test.pass(VRBL.textLinkedInLink + ' - correct link on site');
+        } else
+            test.fail(link+' is incorrect link on site');
+
+        //MAKING SCRTEENSHOTS
         test.comment('Making screenshot');
         casper.capture('screenshots/'+screenNum()+'test.png', {
             top: 0,
             left:0,
             width: widthWindow,
-            height: 1000
+            height: 2000
         });
 
     });

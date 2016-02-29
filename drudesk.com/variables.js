@@ -14,6 +14,7 @@ module.exports = {
 	heightTablet: 1024,
 
 //Elements ON SITE HOME PAGE
+	//HEADER
 	//homepage:
 	nameHowItWorks: 'How it works', // name menu link "How it works"
 	selHowItWorks: 'li.first.leaf.active', // selector menu link "How it works"
@@ -53,5 +54,28 @@ module.exports = {
 
 	selLinkedInHeader: 'header .top-social .linkedin a', //LINKEDIN selector in header
 	textLinkedInLink: 'https://www.linkedin.com/company/drudesk', //LINKEDIN account link
+
+	//FOOTER
+	//homepage:
+	nameHowItWorksFooter: 'How it works', // name menu link "How it works"
+	selHowItWorksFooter: 'footer li.first.leaf.active', // selector menu link "How it works"
+
+	//pricing:
+	namePricingFooter: 'Pricing', // name menu link "Pricing"
+	selPricingFooter: 'footer li.leaf.active', // selector menu link "Pricing"
+
+	//about:
+	nameAboutFooter: 'About', // name menu link "About"
+	selAboutFooter: 'footer li.leaf', // selector menu link "About"
+
+	//blog:
+	nameBlogFooter: 'Blog', // name menu link "Blog"
+	selBlogFooter: 'footer a[href="/blog"]', // selector menu link "Blog"
+
+	//SOCIAL BUTTONS in Footer
+	selFacebookFooter: 'footer .bottom-social .facebook a', //Facebook selector in Footer
+	selGooglePlusFooter: 'footer .bottom-social .google a', //GooglePlus selector in Footer
+	selTwitterFooter: 'footer .bottom-social .twitter a', //TWITTER selector in Footer
+	selLinkedInFooter: 'footer .bottom-social .linkedin a', //LINKEDIN selector in Footer
 
 }
