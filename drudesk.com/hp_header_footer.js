@@ -199,11 +199,11 @@ casper.test.begin('Drudesk web site HOME PAGE test', function (test) {
 
         //MAKING SCRTEENSHOTS
         test.comment('Making screenshot');
-        casper.capture('screenshots/'+screenNum()+'test.png', {
+        casper.capture('screenshots/' + screenNum()+VRBL.namesite + '.png', {
             top: 0,
             left:0,
             width: widthWindow,
-            height: 2000
+            height: 1500
         });
 
     });

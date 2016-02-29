@@ -2,6 +2,8 @@
 module.exports = {
 	currentsite: 'http://drudesk.com/',
 	namesite: 'DruDesk',
+	pageAbout: 'about/',
+	pageBlog: 'blog/',
 
 	//Browser window size
 	widthDesktop: 1024,
@@ -13,7 +15,9 @@ module.exports = {
 	widthTablet: 768, //Apple iPad
 	heightTablet: 1024,
 
-//Elements ON SITE HOME PAGE
+
+
+	//Elements ON SITE HOME PAGE
 	//HEADER
 	//homepage:
 	nameHowItWorks: 'How it works', // name menu link "How it works"
@@ -22,6 +26,7 @@ module.exports = {
 	//pricing:
 	namePricing: 'Pricing', // name menu link "Pricing"
 	selPricing: 'li.leaf.active', // selector menu link "Pricing"
+	pageAboutTitle: 'About us - website support and maintenance company | Drudesk',
 
 	//about:
 	nameAbout: 'About', // name menu link "About"
