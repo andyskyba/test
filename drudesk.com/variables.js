@@ -83,4 +83,17 @@ module.exports = {
 	selTwitterFooter: 'footer .bottom-social .twitter a', //TWITTER selector in Footer
 	selLinkedInFooter: 'footer .bottom-social .linkedin a', //LINKEDIN selector in Footer
 
+	//FORMS VARIABLES
+	//HOMEPAGE
+	selButtonFindOutHow: 'div.find-out-how a', //button "FIND OUT HOW" selector
+	selFormFindOutHow: 'form[action="/modal/ajax/57"]', //form "FIND OUT HOW" selector
+	selButtonSubmit: '#edit-submit', //button "SUBMIT" selector
+	selResponsePopup: '.node.node-webform-response.node-promoted.clearfix', // Confirmation message pop-up selector
+	selResponseText: '.confirmation-text',
+	textResponse: 'Thank you! We will contact you soon.',
+
+	//TEST DATA
+	testName: 'Edward',
+	testEmail: 'sky@test.com',
+	testMessage: 'DO NOT RESPOND. This is just test! :)',
 }
