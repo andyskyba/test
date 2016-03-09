@@ -5,3 +5,5 @@ casperjs
 test
 YOUR_SCRIPT.js
 --engine=slimerjs
+
+--xunit=YOUR_LOG_NAME.xml
